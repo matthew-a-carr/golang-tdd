@@ -11,6 +11,8 @@ func TestRepeat(t *testing.T) {
 		times     int
 		expected  string
 	}{
+		{"a", -1, ""},
+		{"a", 0, ""},
 		{"a", 1, "a"},
 		{"a", 2, "aa"},
 		{"a", 3, "aaa"},

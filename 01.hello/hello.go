@@ -1,4 +1,4 @@
-package main
+package hello
 
 import "fmt"
 
@@ -8,6 +8,8 @@ const spanishHelloPrefix = "Hola, "
 const french = "French"
 const frenchHelloPrefix = "Bonjour, "
 
+// Hello takes a name and a language and returns the correct welcoming message
+// If no language is provided, it defaults to `English`, i.e: 'Hello'
 func Hello(name, language string) string {
 	if name == "" {
 		name = "world!"

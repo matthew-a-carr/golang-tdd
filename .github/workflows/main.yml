@@ -1,0 +1,23 @@
+name: CI/CD Pipeline
+
+on: push
+
+jobs:
+  unit_test:
+    runs-on: ubuntu-latest
+    name: Unit Test
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+      - name: Run Unit Tests
+        run: go test ./...
+
+  lint:
+    runs-on: ubuntu-latest
+    name: Lint
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v2
